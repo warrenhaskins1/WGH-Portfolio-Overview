@@ -1,10 +1,73 @@
-:root {
+/* Hex color pallette selection
+red main: #9a2a2a 
+background: #001220 */
+
+
+
+:root {}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(95, 138, 95);
+}
+
+.banner {
+    background-image: url("../images/john-towner-89PFnHKg8HE-unsplash.jpg");
+    background-size: cover;
+    height: 175px;
+    width: 100%;
+    margin: 0;
+
 
 }
 
-.hero-image {
-    
+header {
+    padding-left: 10px;
+    background-color: rgb(27, 36, 27);
+    color: #fff;
+    font-style: oblique;
 }
 
-    
-    
+header h1 {
+    display: inline-block;
+    font-size: 40px;
+
+
+}
+
+
+
+header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-size: 20px;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 30px;
+    color: #fff;
+    padding: 20px;
+}
+
+.display-inline {
+    display: inline;
+  }
+
+ 
