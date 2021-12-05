@@ -32,18 +32,23 @@ header {
     background-color: rgb(27, 36, 27);
     color: #fff;
     font-style: oblique;
+    border-bottom: 3px solid rgb(131, 95, 49);
 }
 
 header h1 {
     display: inline-block;
     font-size: 40px;
-
-
+    position: sticky;
+    
 }
 
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+}
 
-
-header nav {
+ header nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
@@ -53,7 +58,7 @@ header nav {
 header nav ul li {
     display: inline-block;
     margin-left: 25px;
-}
+} 
 
 a {
     color: #fff;
@@ -64,10 +69,34 @@ h3 {
     font-size: 30px;
     color: #fff;
     padding: 20px;
+    
 }
 
-.display-inline {
-    display: inline;
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 3;
+}
+
+.name {
+      font-size: 48px;
+      color: rgb(231, 171, 91);
   }
 
+  
  
