@@ -29,6 +29,8 @@ body {
     height: 175px;
     width: 100%;
     margin: 0;
+    border-bottom: 3px solid rgb(131, 95, 49);
+    z-index: -1;
 }
 
 .name {
@@ -48,6 +50,7 @@ header h1 {
     display: inline-block;
     font-size: 40px;
     position: sticky;
+    text-shadow: 0 0 3px rgb(231, 171, 91);
 
 }
 
@@ -121,13 +124,39 @@ section {
     position: absolute;
     background: var(--background-color);
     height: 60px;  
-    width: 38%;
+    width: 510px;
     left: 0px;
     top: 35px;
     border: 2px solid rgb(231, 171, 91);
     border-left-color: transparent;
+    border-bottom-color: 1px #fff;
     border-radius: 0px 50px 50px 0px;
     
+}
+
+.welcome {
+    position: absolute;
+    background: var(--background-color);
+    height: 60px;  
+    width: 300px;
+    right: 0px;
+    top: 160px;
+    border: 2px solid rgb(231, 171, 91);
+    border-right-color: transparent;
+    border-bottom-color: 1px #fff;
+    border-radius: 50px 0px 0px 50px;
+    z-index: 1;
+    
+}
+
+.hi {
+    display: inline-block;
+    position: absolute;
+    right: 100px;
+    top: -30px;
+    z-index: 2;
+    font-style: oblique;
+    text-shadow: 0 0 3px rgb(231, 171, 91);
 }
 
 .avatar {
