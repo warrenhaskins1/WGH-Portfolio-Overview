@@ -1,3 +1,9 @@
+/* Things to address:
+1.Contact verticle margin
+2.Avatar
+3.images
+*/
+
 :root {
     --background-color: rgb(95, 138, 95);
 }
@@ -7,6 +13,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* animation for smooth content scrolling */
 html {
     scroll-behavior: smooth;
 }
@@ -74,6 +81,8 @@ h2 {
     color: #fff;
     padding: 20px;
     text-align: right;
+    line-height: 1em;
+    
     /* border-right: 5px solid #fff; */
 }
 
@@ -103,6 +112,34 @@ section {
     
 }
 
+
+.uName {
+    left: 100px;
+}
+
+.bg-box {
+    position: absolute;
+    background: var(--background-color);
+    height: 60px;  
+    width: 38%;
+    left: 0px;
+    top: 35px;
+    border: 2px solid rgb(231, 171, 91);
+    border-left-color: transparent;
+    border-radius: 0px 50px 50px 0px;
+    
+}
+
+.avatar {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 10px 10px;
+    border: 3px solid rgb(231, 171, 91);
+    top: 15px;
+}
+
 .sample-img-main {
     background-color: #fff;
     width: 100%;
@@ -123,6 +160,7 @@ section {
     display: flex;
     font-size: 20px;
     justify-content: space-around;
+    align-items: center;
     margin-top: 30px;
     
 
@@ -134,6 +172,10 @@ section {
 
 
 }
+
+
+
+
 
 .vline {
     display: flex;
