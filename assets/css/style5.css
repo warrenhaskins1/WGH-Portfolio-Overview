@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* animation for smooth content scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Style the body */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* Header/logo Title */
+.banner {
+    padding: 60px;
+    text-align: start;
+    font-style: oblique;
+    color: #fff;
+    background-image: url("../images/john-towner-89PFnHKg8HE-unsplash.jpg");
+    margin: 0;
+    margin-bottom: 20px;
+    border-bottom: 3px solid rgb(131, 95, 49);
+    z-index: -1;
+}
+
+h1, h2 {
+    font-size: 30px;
+    color: #fff;
+    padding: 20px;
+    text-align: right;
+    line-height: 1em;
+    font-style: oblique;
+    text-shadow: 0 0 3px rgb(231, 171, 91);
+}
+
+.banner h2 {
+    text-align: end;
+}
+
+.uName {
+    left: 100px;
+}
+
+.bg-box {
+    position: absolute;
+    background: var(--background-color);
+    height: 60px;
+    width: 510px;
+    left: 0px;
+    top: 35px;
+    border: 2px solid rgb(231, 171, 91);
+    border-left-color: transparent;
+    border-bottom-color: 1px #fff;
+    border-radius: 0px 50px 50px 0px;
+
+}
+
+.welcome {
+    position: absolute;
+    background: var(--background-color);
+    height: 60px;
+    width: 300px;
+    right: 0px;
+    top: 160px;
+    border: 2px solid rgb(231, 171, 91);
+    border-right-color: transparent;
+    border-bottom-color: 1px #fff;
+    border-radius: 50px 0px 0px 50px;
+    z-index: 1;
+
+}
+
+.hi {
+    display: inline-block;
+    position: absolute;
+    right: 100px;
+    top: -30px;
+    z-index: 2;
+    font-style: oblique;
+    text-shadow: 0 0 3px rgb(231, 171, 91);
+}
+
+.avatar {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 10px 10px;
+    border: 3px solid rgb(231, 171, 91);
+    top: 15px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+    display: flex;
+    justify-content: end;
+    background-color: rgb(27, 36, 27);
+    color: #fff;
+    font-style: oblique;
+    border-bottom: 3px solid rgb(131, 95, 49);
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg-1 {
+    background-image: url('../images/red-foliage-bokeh-wallpaper-preview.jpg');
+    width: 100%;
+    padding: 20px;
+}
+
+.fakeimg-2 {
+    background-image: url('../images/red-foliage-bokeh-wallpaper-preview.jpg');
+    width: 50%;
+    padding: 20px;
+}
+
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row, .navbar {
+        flex-direction: column;
+    }
+}

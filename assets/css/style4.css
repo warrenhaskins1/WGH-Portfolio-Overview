@@ -6,6 +6,7 @@
 
 :root {
     --background-color: rgb(95, 138, 95);
+    --special-text-color: rgb(231, 171, 91);
 }
 
 * {
@@ -38,7 +39,13 @@ body {
     color: rgb(231, 171, 91);
 }
 
+.wrapper {
+    display: flex;
+
+}
 header {
+    display: flex;
+    flex: 50%;
     padding-left: 10px;
     background-color: rgb(27, 36, 27);
     color: #fff;
@@ -47,32 +54,44 @@ header {
 }
 
 header h1 {
-    display: inline-block;
     font-size: 40px;
     position: sticky;
     text-shadow: 0 0 3px rgb(231, 171, 91);
-
 }
 
-
-.navigation {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: end;
-    padding-right: 40px;
+.navbar {
+   display:flex;
+   flex: 50;
+   background-color: rgb(27, 36, 27);
+   border-bottom: 3px solid rgb(131, 95, 49);
 }
 
-header nav {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-size: 20px;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin-left: 25px;
-}
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    display:flex;
+    color: white;
+    justify-content: space-around;
+    padding: 40px;
+    text-decoration: none;
+    text-align: end;
+    font-size: 24px;
+    font-style: oblique;
+    
+  }
+  
+  /* Change color on hover */
+  .navbar a:hover {
+    transition: 0.2s;
+    transform: scale(1.2);
+    color:var(--special-text-color);
+    text-shadow:
+      3px 3px 0 var(#fff),
+      -1px -1px 0 var(#fff),
+      1px -1px 0 var(#fff),
+      -1px 1px 0 var(#fff),
+      1px 1px 0 var(#fff);
+  }
 
 a {
     color: #fff;
@@ -87,7 +106,7 @@ h2 {
     line-height: 1em;
     font-style: oblique;
     text-shadow: 0 0 3px rgb(231, 171, 91);
-    
+
     /* border-right: 5px solid #fff; */
 }
 
@@ -113,8 +132,8 @@ section {
     flex: 3;
     background-color: var(--background-color);
     padding: 20px;
-    
-    
+
+
 }
 
 
@@ -125,7 +144,7 @@ section {
 .bg-box {
     position: absolute;
     background: var(--background-color);
-    height: 60px;  
+    height: 60px;
     width: 510px;
     left: 0px;
     top: 35px;
@@ -133,13 +152,13 @@ section {
     border-left-color: transparent;
     border-bottom-color: 1px #fff;
     border-radius: 0px 50px 50px 0px;
-    
+
 }
 
 .welcome {
     position: absolute;
     background: var(--background-color);
-    height: 60px;  
+    height: 60px;
     width: 300px;
     right: 0px;
     top: 160px;
@@ -148,7 +167,7 @@ section {
     border-bottom-color: 1px #fff;
     border-radius: 50px 0px 0px 50px;
     z-index: 1;
-    
+
 }
 
 .hi {
@@ -171,7 +190,7 @@ section {
     top: 15px;
 }
 
-.sample-img-main {
+/* .sample-img-main {
     background-color: #fff;
     width: 100%;
     padding: 20px;
@@ -185,7 +204,9 @@ section {
     padding: 20px;
     height: 200px;
     border: 1px solid black;
-}
+} */
+
+
 
 .contact {
     display: flex;
@@ -193,7 +214,7 @@ section {
     justify-content: space-around;
     align-items: center;
     margin-top: 30px;
-    
+
 
 }
 
@@ -202,7 +223,9 @@ section {
     border-bottom: 3px solid #fff;
 
 
-}.vline {
+}
+
+.vline {
     display: flex;
     justify-content: flex-end;
 }
@@ -219,6 +242,83 @@ hr {
     border-radius: 10px;
     text-shadow: 0 0 3px rgb(231, 171, 91);
 }
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 4px;
+    max-height: 50%;
+}
+
+.column-2 {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+    flex: 0 1 calc(50% - 2*10px);
+}
+
+.column img {
+    margin: 10px 0;
+    vertical-align: middle;
+}
+
+
+@media screen and (max-width: 700px) {
+    .row, .navbar {
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/* .img {
+    height: 320px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-1 {
+    width: 100%;
+    height: 320px;
+    margin: 10px;
+    background-color: blue;
+    flex: 0 1 calc(100% - 2*10px);
+    flex-shrink: 3;
+}
+
+.box {
+    width: 50%;
+    height: 320px;
+    margin: 10px;
+    background-color: blue;
+    flex: 0 1 calc(50% - 2*10px);
+    
+} */
 
 footer {
     padding: 20px;
@@ -237,17 +337,21 @@ footer {
 
     /* Make the sidebar stack below the body */
     aside {
+        order: 2;
+    }
+
+    p {
+order: 1;
+    }
+
+    
+    header {
         order: 1;
     }
 
-    /* Change the header background */
-    header {
-        background: #772014;
-    }
-
     /* Change the navbar and footer background */
-    nav
-     {
+    nav {
         background-color: #bb8588;
     }
+
 }
