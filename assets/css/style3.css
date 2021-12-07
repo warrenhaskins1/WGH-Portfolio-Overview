@@ -1,51 +1,342 @@
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+
 }
+
+:root {
+    --background-color: rgb(95, 138, 95);
+    --special-text-color: rgb(231, 171, 91);
+}
+
 
 body {
-    background-color: #d9dcd6;
+    font-family: Arial;
+    margin: 0;
+    background-color: rgb(95, 138, 95);
 }
 
-.header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
-    color: #ffffff;
+
+
+html {
+    scroll-behavior: smooth;
 }
 
-.header h1 {
-    display: inline-block;
+
+header {
+    padding: 60px;
+    text-align: center;
+    background-image: url("../images/john-towner-89PFnHKg8HE-unsplash.jpg");
+    background-size: cover;
+    height: 175px;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 3px solid rgb(131, 95, 49);
+    border-bottom: 3px solid rgb(131, 95, 49);
+
+}
+
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(27, 36, 27);
+    justify-content: space-around;
+
+}
+
+nav h1 {
+right: 200px;
+    font-size: 40px;
+    text-shadow: 0 0 3px rgb(231, 171, 91);
+    color: #fff;
+    font-style: oblique;
+    z-index: 1;
+}
+
+.name {
     font-size: 48px;
+    color: rgb(231, 171, 91);
 }
 
-.header h1 .name {
-    color: #d9dcd6;
+ul li  {
+    display: inline-flex;
+    list-style: none;
 }
 
-.header div {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-}
-
-.header div ul {
-    list-style-type: none;
-}
-
-.header div ul li {
-    display: inline-block;
-    margin-left: 25px;
-}
-
-a {
-    color: #ffffff;
+nav a {
+    color: white;
+    padding: 20px 20px;
+    margin: 20px 5px;
     text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+    font-style: oblique;
+
 }
+
+
+nav a:hover {
+    transition: 0.2s;
+    transform: scale(1.2);
+    color: var(--special-text-color);
+    text-shadow:
+        3px 3px 0 var(#fff),
+        -1px -1px 0 var(#fff),
+        1px -1px 0 var(#fff),
+        -1px 1px 0 var(#fff),
+        1px 1px 0 var(#fff);
+}
+
+h2 {
+    font-size: 30px;
+    color: #fff;
+    padding: 20px;
+    text-align: right;
+    line-height: 1em;
+    font-style: oblique;
+    text-shadow: 0 0 3px rgb(231, 171, 91);
+
+    /* border-right: 5px solid #fff; */
+}
+
 
 .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.contact-links {
+    display: flex;
+    justify-content: space-around;
+
 
 }
+
+ .contact {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    border-bottom: 3px solid #fff;
+    text-shadow: 0 0 3px rgb(231, 171, 91);
+}
+
+.contact:hover {
+    transition: 0.2s;
+    transform: scale(1.2);
+    color: var(--special-text-color);
+    text-shadow:
+        3px 3px 0 var(#fff),
+        -1px -1px 0 var(#fff),
+        1px -1px 0 var(#fff),
+        -1px 1px 0 var(#fff),
+        1px 1px 0 var(#fff);
+}
+
+
+aside {
+    flex: 30%;
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+.avatar {
+
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 10px 10px;
+    border: 3px solid rgb(231, 171, 91);
+    z-index: 1;
+
+}
+
+
+.bg-box {
+    position: absolute;
+    background: var(--background-color);
+    height: 60px;
+    width: 750px;
+    left: 0px;
+    top: 35px;
+    border: 2px solid rgb(231, 171, 91);
+    border-left-color: transparent;
+    border-bottom-color: 1px #fff;
+    border-radius: 0px 50px 50px 0px;
+
+}
+
+
+
+
+.welcome {
+    font-size: 40px;
+    text-align: center;
+    margin: 0 auto;
+    text-shadow: 0 0 3px rgb(231, 171, 91);
+    color: #fff;
+    font-style: oblique;
+
+}
+
+.vline {
+    display: flex;
+    justify-content: flex-end;
+}
+
+hr {
+    min-height: 100%;
+    max-height: 100vh;
+    margin: 0;
+    border: 2px solid rgb(131, 95, 49);
+    border-radius: 10px;
+    text-shadow: 0 0 3px rgb(231, 171, 91);
+}
+
+.main-side {
+    flex: 70%;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+
+
+.img-1 {
+
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    border: 5px solid rgb(131, 95, 49);
+    background-image: url("../images/red-foliage-bokeh-wallpaper-preview.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.img-2 {
+
+    width: 50%;
+    padding: 20px;
+    border: 5px solid rgb(131, 95, 49);
+    ;
+    background-image: url("../images/pexels-photo-6858608.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.img-3 {
+
+    width: 50%;
+    padding: 20px;
+    border: 5px solid rgb(131, 95, 49);
+    ;
+    background-image: url("../images/pexels-photo-6272174.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.img-4 {
+
+    width: 50%;
+    padding: 20px;
+    border: 5px solid rgb(131, 95, 49);
+    ;
+    background-image: url("../images/pexels-photo-5583073.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.img-5 {
+
+    width: 50%;
+    padding: 20px;
+    border: 5px solid rgb(131, 95, 49);
+    ;
+    background-image: url("../images/pexels-photo-4992384.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .row, nav, .img, .contact-links {
+        flex-direction: column;
+    }
+
+    ul li {
+        display:flex;
+        flex-direction: column;
+
+    }
+
+    
+
+    .uName {
+        text-align: center;
+    }
+
+    .img-1 {
+        width: 100%;
+    }
+
+    .img-2,
+    .img-3,
+    .img-4,
+    .img-5 {
+        width: 100%;
+    }
+
+    .contact {
+        text-align: center;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .horizontal {
+        display: none;
+    }
+
+
+    aside {
+        display: flex;
+        flex-shrink: 2;
+    }
+    h2 {
+        flex-grow: 2;
+        text-align: center;
+        border-bottom: 3px solid rgb(131, 95, 49);
+    }
+
+}
+
+@media screen and (min-width: 1679px) {
+    nav h1 {
+        position: relative;
+        right: 100px;
+    }
+}
+@media screen and (min-width: 2000px) {
+    nav h1 {
+        position: relative;
+        right: 200px;
+    }
+}
+

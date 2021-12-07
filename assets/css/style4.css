@@ -273,7 +273,7 @@ hr {
 
 @media screen and (max-width: 700px) {
     .row, .navbar {
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 
