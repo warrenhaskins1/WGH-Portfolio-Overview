@@ -1,21 +1,21 @@
 /* GIVEN I need to sample a potential employee's previous work
 WHEN I load their portfolio
 
-THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
+THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them***
 
 WHEN I click one of the links in the navigation
-THEN the UI scrolls to the corresponding section
+THEN the UI scrolls to the corresponding section***
 
 WHEN I click on the link to the section about their work
-THEN the UI scrolls to a section with titled images of the developer's applications
+THEN the UI scrolls to a section with titled images of the developer's applications***
 
 WHEN I am presented with the developer's first application
-THEN that application's image should be larger in size than the others
+THEN that application's image should be larger in size than the others***
 
 WHEN I click on the images of the applications
-THEN I am taken to that deployed application
+THEN I am taken to that deployed application***
 
-WHEN I resize the page or view the site on various screens and devices
+WHEN I resize the page or view the site on various screens and devices***
 THEN I am presented with a responsive layout that adapts to my viewport */
 
 
@@ -120,6 +120,10 @@ h2 {
     text-shadow: 0 0 3px rgb(231, 171, 91);
 
     /* border-right: 5px solid #fff; */
+}
+
+p {
+    letter-spacing: 1px;
 }
 
 
@@ -259,7 +263,7 @@ hr {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.65;
+    opacity: 0.5;
     position: relative;
 }
 
@@ -291,9 +295,6 @@ hr {
   }
 
 
-
-
-
 @media screen and (max-width: 768px) {
     .row, nav, .img, .contact-links {
         flex-direction: column;
@@ -311,13 +312,46 @@ hr {
         text-align: center;
     }
 
-    .img-1 {
-        width: 100%;
-    }
+    
+.img-1 {
 
-    .img {
-        width: 100%;
-    }
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    border: 5px solid rgb(131, 95, 49);
+    background-image: linear-gradient(to bottom, rgb(27, 36, 27), rgb(163, 180, 163)  );
+    box-shadow: 10px 8px rgb(27, 36, 27);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.75;
+    position: relative;
+}
+
+.img {
+
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 5px solid rgb(131, 95, 49);
+    background-image: linear-gradient(to bottom, rgb(27, 36, 27), rgb(163, 180, 163) );
+    box-shadow: 10px 8px rgb(27, 36, 27);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    position: relative;
+}
+
+.img-1:hover, .img:hover {
+    opacity: 1.0;
+   transition: opacity 0.5s linear
+}
+
+.bottom-left {
+    display: none;
+}
 
     .contact {
         text-align: center;
