@@ -1,3 +1,26 @@
+/* GIVEN I need to sample a potential employee's previous work
+WHEN I load their portfolio
+
+THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
+
+WHEN I click one of the links in the navigation
+THEN the UI scrolls to the corresponding section
+
+WHEN I click on the link to the section about their work
+THEN the UI scrolls to a section with titled images of the developer's applications
+
+WHEN I am presented with the developer's first application
+THEN that application's image should be larger in size than the others
+
+WHEN I click on the images of the applications
+THEN I am taken to that deployed application
+
+WHEN I resize the page or view the site on various screens and devices
+THEN I am presented with a responsive layout that adapts to my viewport */
+
+
+
+
 * {
     box-sizing: border-box;
 
@@ -110,6 +133,7 @@ h2 {
 .contact-links {
     display: flex;
     justify-content: space-around;
+    
 
 
 }
@@ -118,6 +142,7 @@ h2 {
     text-decoration: none;
     color: #fff;
     font-size: 1.2rem;
+    margin: 0px auto;
     border-bottom: 3px solid #fff;
     text-shadow: 0 0 3px rgb(231, 171, 91);
 }
@@ -215,64 +240,57 @@ hr {
     padding: 20px;
     margin: auto;
     border: 5px solid rgb(131, 95, 49);
-    background-image: url("../images/red-foliage-bokeh-wallpaper-preview.jpg");
+    background-image: linear-gradient(to bottom, rgb(27, 36, 27), rgb(163, 180, 163)  );
+    box-shadow: 10px 8px rgb(27, 36, 27);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.75;
     position: relative;
 }
 
-.img-2 {
+.img {
 
     width: 50%;
     padding: 20px;
     border: 5px solid rgb(131, 95, 49);
-    ;
-    background-image: url("../images/pexels-photo-6858608.jpeg");
+    background-image: linear-gradient(to bottom, rgb(27, 36, 27), rgb(163, 180, 163) );
+    box-shadow: 10px 8px rgb(27, 36, 27);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.65;
     position: relative;
 }
 
-.img-3 {
-
-    width: 50%;
-    padding: 20px;
-    border: 5px solid rgb(131, 95, 49);
-    ;
-    background-image: url("../images/pexels-photo-6272174.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+.img-1:hover, .img:hover {
+    opacity: 1.0;
+   transition: opacity 0.5s linear
 }
 
-.img-4 {
+.bottom-left {
+    position: absolute;
+    background: var(--background-color);
+    height: 60px;
+    width: 200px;
+    left: 0px;
+    bottom: 40px;
+    border: 2px solid rgb(231, 171, 91);
+    border-left-color: transparent;
+    border-bottom-color: 1px #fff;
+    border-radius: 0px 50px 50px 0px;
+  }
 
-    width: 50%;
-    padding: 20px;
-    border: 5px solid rgb(131, 95, 49);
-    ;
-    background-image: url("../images/pexels-photo-5583073.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
+  .bottom-left h3 {
+      
+      font-size: 20px;
+      text-align: center;
+      text-shadow: 0 0 3px rgb(231, 171, 91);
+      color: #fff;
+      font-style: oblique;
+  }
 
-.img-5 {
 
-    width: 50%;
-    padding: 20px;
-    border: 5px solid rgb(131, 95, 49);
-    ;
-    background-image: url("../images/pexels-photo-4992384.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
 
 
 
@@ -297,10 +315,7 @@ hr {
         width: 100%;
     }
 
-    .img-2,
-    .img-3,
-    .img-4,
-    .img-5 {
+    .img {
         width: 100%;
     }
 
@@ -327,16 +342,5 @@ hr {
 
 }
 
-@media screen and (min-width: 1679px) {
-    nav h1 {
-        position: relative;
-        right: 100px;
-    }
-}
-@media screen and (min-width: 2000px) {
-    nav h1 {
-        position: relative;
-        right: 200px;
-    }
-}
+
 
